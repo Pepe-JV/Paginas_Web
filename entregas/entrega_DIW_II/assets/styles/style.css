@@ -679,22 +679,6 @@ footer {
     }
 }
 
-/* Animaciones sutiles */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-section {
-    animation: fadeIn 0.8s ease-in-out;
-}
-
 /* Imágenes placeholder con gradiente */
 .categoria-imagen img[src*=".jpg"],
 .galeria-taller img[src*=".jpg"] {
@@ -1058,11 +1042,6 @@ section {
     transform: translateY(-5px);
 }
 
-.info-icon {
-    font-size: 3rem;
-    margin-bottom: 15px;
-}
-
 .info-card h3 {
     font-size: 1.3rem;
     color: var(--verde-suave);
@@ -1093,18 +1072,10 @@ section {
 }
 
 .contacto-page .info-contacto .info-item {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
     background-color: var(--crudo);
     padding: 25px;
     border-radius: 10px;
     margin-bottom: 20px;
-}
-
-.contacto-page .info-icon {
-    font-size: 2rem;
-    flex-shrink: 0;
 }
 
 .info-text h3 {
@@ -1210,11 +1181,6 @@ section {
 
 .valor-card:hover {
     transform: translateY(-10px);
-}
-
-.valor-icon {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
 }
 
 .valor-card h3 {
