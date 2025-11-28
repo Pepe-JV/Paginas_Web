@@ -680,7 +680,7 @@ footer {
 }
 
 /* Imágenes placeholder con gradiente */
-.categoria-imagen img[src*=".jpg"],
+.categoria-imagen img[src*=".jpg"], 
 .galeria-taller img[src*=".jpg"] {
     background: linear-gradient(135deg, var(--verde-claro), var(--crudo-oscuro));
 }
