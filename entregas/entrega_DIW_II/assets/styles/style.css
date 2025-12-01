@@ -93,6 +93,38 @@ header .container {
     font-style: italic;
 }
 
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: var(--verde-suave);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(10px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-10px);
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -193,107 +225,12 @@ section .intro {
     margin-right: auto;
 }
 
-/* Catálogo */
-.catalogo {
-    background-color: var(--blanco);
-}
-
-.categorias {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    margin-bottom: 60px;
-}
-
-.categoria {
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.categoria:hover {
-    transform: translateY(-10px);
-}
-
-.categoria-imagen {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-.categoria-imagen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.categoria:hover .categoria-imagen img {
-    transform: scale(1.1);
-}
-
-.categoria h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: var(--negro-suave);
-}
-
-.categoria-descripcion {
-    font-style: italic;
-    color: var(--gris-texto);
-    font-size: 1.1rem;
-}
-
-.detalle-info {
-    background-color: var(--crudo);
-    padding: 40px;
-    border-radius: 15px;
-    text-align: center;
-}
-
-.detalle-info h3 {
-    margin-bottom: 20px;
-    color: var(--verde-suave);
-}
-
-.detalle-info ul {
-    list-style: none;
-    font-size: 1.1rem;
-}
-
-.detalle-info li {
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 25px;
-}
-
-.detalle-info li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: var(--verde-suave);
-    font-weight: bold;
-}
-
 /* Contacto */
-.contacto {
-    background-color: var(--crudo);
-}
-
 .contacto-contenido {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     margin-top: 50px;
-}
-
-.formulario-contacto h3,
-.info-contacto h3 {
-    font-size: 1.8rem;
-    margin-bottom: 25px;
-    color: var(--verde-suave);
 }
 
 .form-group {
@@ -358,44 +295,7 @@ section .intro {
     font-size: 1.2rem;
 }
 
-.aviso-cookies {
-    margin-top: 40px;
-    text-align: center;
-    padding: 20px;
-    background-color: var(--verde-claro);
-    border-radius: 10px;
-    color: var(--negro-suave);
-}
-
 /* Nosotros */
-.nosotros {
-    background-color: var(--blanco);
-}
-
-.nosotros-contenido {
-    display: grid;
-    gap: 40px;
-    margin-top: 50px;
-}
-
-.apartado-nosotros {
-    background-color: var(--crudo);
-    padding: 40px;
-    border-radius: 15px;
-}
-
-.apartado-nosotros h3 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: var(--verde-suave);
-}
-
-.apartado-nosotros p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--gris-texto);
-}
-
 .galeria-taller {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -417,24 +317,6 @@ section .intro {
 }
 
 /* FAQs */
-.faqs {
-    background-color: var(--crudo);
-}
-
-.faqs-intro {
-    text-align: center;
-    font-size: 1.1rem;
-    color: var(--gris-texto);
-    margin-bottom: 50px;
-}
-
-.faqs-lista {
-    display: grid;
-    gap: 30px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
 .faq-item {
     background-color: var(--blanco);
     padding: 30px;
@@ -564,6 +446,7 @@ footer {
 .cookie-content p {
     margin: 0;
     flex: 1;
+    font-size: 0.95rem;
 }
 
 .btn-cookie {
@@ -575,6 +458,7 @@ footer {
     cursor: pointer;
     font-weight: 600;
     transition: background-color 0.3s ease;
+    white-space: nowrap;
 }
 
 .btn-cookie:hover {
@@ -584,38 +468,88 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     header .container {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         gap: 20px;
     }
     
     .logo {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row;
+        text-align: left;
+        gap: 10px;
     }
     
     .logo-img {
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
     }
     
     .logo h1 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+    }
+    
+    .tagline {
+        font-size: 0.75rem;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: var(--blanco);
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        z-index: 1000;
+        padding: 80px 30px 30px;
+    }
+    
+    nav.active {
+        right: 0;
     }
     
     nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+        flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
+    }
+    
+    nav li {
+        width: 100%;
+        border-bottom: 1px solid var(--crudo);
+    }
+    
+    nav a {
+        display: block;
+        padding: 15px 10px;
+        width: 100%;
+    }
+    
+    nav a::after {
+        bottom: 0;
     }
     
     .hero h2,
     .page-hero h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        line-height: 1.3;
     }
     
     .hero-subtitle,
     .page-hero p {
-        font-size: 1rem;
+        font-size: 0.95rem;
+        padding: 0 10px;
+    }
+    
+    section {
+        padding: 50px 0;
     }
     
     .hero-cta {
@@ -630,16 +564,86 @@ footer {
     .categorias,
     .categorias-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
     
     .productos-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .categoria-card .categoria-imagen,
+    .producto-imagen {
+        height: 250px;
+    }
+    
+    .info-cards,
+    .valores-grid,
+    .servicios-grid,
+    .galeria-taller {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
     
     .contacto-contenido,
     .contacto-page .contacto-contenido {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 30px;
+    }
+    
+    .formulario-contacto h2,
+    .info-contacto h2 {
+        font-size: 1.5rem;
+    }
+    
+    .form-intro {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .form-group label {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+    
+    .btn-submit {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+    
+    .info-contacto .info-item {
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .info-text h3 {
+        font-size: 1.1rem;
+    }
+    
+    .info-text p {
+        font-size: 0.9rem;
+    }
+    
+    .mapa-placeholder {
+        padding: 50px 20px;
+    }
+    
+    .mapa-placeholder p {
+        font-size: 1rem;
+    }
+    
+    .ubicacion h2 {
+        font-size: 1.8rem;
     }
     
     .preview-content,
@@ -658,9 +662,15 @@ footer {
         margin-right: auto;
     }
     
+    .cookie-banner {
+        width: 95%;
+        bottom: 10px;
+    }
+    
     .cookie-content {
         flex-direction: column;
         text-align: center;
+        gap: 15px;
     }
     
     .btn-cookie {
@@ -677,12 +687,6 @@ footer {
         width: 100%;
         max-width: 300px;
     }
-}
-
-/* Imágenes placeholder con gradiente */
-.categoria-imagen img[src*=".jpg"], 
-.galeria-taller img[src*=".jpg"] {
-    background: linear-gradient(135deg, var(--verde-claro), var(--crudo-oscuro));
 }
 
 /* ==================== ESTILOS ADICIONALES PARA PÁGINAS SEPARADAS ==================== */
@@ -822,6 +826,13 @@ footer {
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
+}
+
+@media (max-width: 968px) {
+    .preview-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
 }
 
 .preview-text h2 {
@@ -1066,6 +1077,13 @@ footer {
     margin-top: 50px;
 }
 
+@media (max-width: 968px) {
+    .contacto-page .contacto-contenido {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
 .form-intro {
     color: var(--gris-texto);
     margin-bottom: 30px;
@@ -1122,6 +1140,13 @@ footer {
     gap: 60px;
     align-items: center;
     margin-top: 50px;
+}
+
+@media (max-width: 968px) {
+    .historia-contenido {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
 }
 
 .historia-texto p {
