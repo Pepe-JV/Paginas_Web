@@ -1,0 +1,20 @@
+/* Importamos Tailwind */
+@import "tailwindcss";
+
+/* Colores y fuente personalizados de Custodya */
+@theme {
+  --color-verde-oscuro: #14532d;
+  --color-verde: #1a6b3c;
+  --color-verde-claro: #dcfce7;
+  --color-verde-suave: #f0fdf4;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+/* Estilos generales */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+}

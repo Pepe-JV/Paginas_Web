@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Custodya - Gestión integral para asociaciones, hermandades y organizaciones." />
+  <link rel="icon" type="image/svg+xml" href="./src/img/logo_grande.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <title>Custodya - Gestión integral para tu organización</title>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Cabecera con la barra de navegación -->
+  <header>
+    <!-- Transición suave al cambiar fondo del navbar con scroll -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-transparent transition duration-300">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
+
+      <!-- Logo y nombre -->
+      <a href="#" class="flex items-center gap-2">
+        <img src="./src/img/logo_grande.png" alt="Custodya" class="h-10" />
+        <span class="text-xl font-bold text-verde-oscuro">Custodya</span>
+      </a>
+
+      <!-- Enlaces de escritorio -->
+      <div class="hidden md:flex items-center gap-6">
+        <a href="#funcionalidades" class="text-sm text-gray-600 hover:text-verde transition duration-200">Funcionalidades</a>
+        <a href="#para-quien" class="text-sm text-gray-600 hover:text-verde transition duration-200">¿Para quién?</a>
+        <a href="#precios" class="text-sm text-gray-600 hover:text-verde transition duration-200">Precios</a>
+        <a href="#contacto" class="px-4 py-2 rounded-lg bg-verde text-white text-sm font-semibold hover:bg-verde-oscuro focus:outline-none focus:ring-2 focus:ring-verde-claro transition duration-200">
+          Empezar gratis
+        </a>
+      </div>
+
+      <!-- Botón menú móvil -->
+      <button id="btn-menu" class="md:hidden p-2" aria-label="Abrir menú">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menú móvil (oculto por defecto) -->
+    <div id="menu-movil" class="hidden md:hidden bg-white border-t px-4 py-4 space-y-3">
+      <a href="#funcionalidades" class="block text-sm text-gray-600 py-2">Funcionalidades</a>
+      <a href="#para-quien" class="block text-sm text-gray-600 py-2">¿Para quién?</a>
+      <a href="#precios" class="block text-sm text-gray-600 py-2">Precios</a>
+      <a href="#contacto" class="block text-center px-4 py-2 rounded-lg bg-verde text-white text-sm font-semibold">
+        Empezar gratis
+      </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sección principal (Hero) -->
+  <section class="bg-verde-suave pt-28 pb-16 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-sm font-semibold text-verde mb-4">Plataforma SaaS de gestión integral</p>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+        Custodia lo que <span class="text-verde">realmente importa</span>
+      </h1>
+      <p class="mt-4 text-lg text-gray-600">
+        Gestión centralizada de miembros, finanzas, eventos y patrimonio para
+        hermandades, asociaciones y organizaciones comunitarias.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="#contacto" class="px-6 py-3 rounded-lg bg-verde text-white font-semibold hover:bg-verde-oscuro focus:outline-none focus:ring-2 focus:ring-verde-claro transition duration-200">
+          Solicitar demo gratuita
+        </a>
+        <a href="#funcionalidades" class="px-6 py-3 rounded-lg border-2 border-verde-claro text-verde-oscuro font-semibold hover:bg-verde-claro focus:outline-none focus:ring-2 focus:ring-verde transition duration-200">
+          Ver funcionalidades
+        </a>
+      </div>
+      <!-- Badges de confianza -->
+      <div class="mt-8 flex flex-wrap justify-center gap-4 text-sm text-gray-500">
+        <span>Sin tarjeta de crédito</span>
+        <span>|</span>
+        <span>RGPD compatible</span>
+        <span>|</span>
+        <span>Soporte incluido</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de funcionalidades -->
+  <section id="funcionalidades" class="py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900">Todo lo que necesitas</h2>
+        <p class="mt-2 text-gray-500">Herramientas sencillas para gestionar tu organización.</p>
+      </div>
+
+      <!-- Grid de funcionalidades (6 tarjetas) -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Tarjeta: Miembros -->
+        <div class="p-6 rounded-xl border border-gray-200 hover:border-verde-claro hover:shadow-md transition duration-300">
+          <h3 class="text-lg font-bold">Gestión de Miembros</h3>
+          <p class="mt-1 text-sm text-gray-500">Perfiles, historial de actividad, roles y segmentación de integrantes.</p>
+        </div>
+
+        <!-- Tarjeta: Cuotas -->
+        <div class="p-6 rounded-xl border border-gray-200 hover:border-verde-claro hover:shadow-md transition duration-300">
+          <h3 class="text-lg font-bold">Cuotas y Cobros</h3>
+          <p class="mt-1 text-sm text-gray-500">Pagos recurrentes, conciliación bancaria y recibos digitales.</p>
+        </div>
+
+        <!-- Tarjeta: Eventos -->
+        <div class="p-6 rounded-xl border border-gray-200 hover:border-verde-claro hover:shadow-md transition duration-300">
+          <h3 class="text-lg font-bold">Calendario y Eventos</h3>
+          <p class="mt-1 text-sm text-gray-500">Planificación, notificaciones automáticas y control de asistencia.</p>
+        </div>
+
+        <!-- Tarjeta: Patrimonio -->
+        <div class="p-6 rounded-xl border border-gray-200 hover:border-verde-claro hover:shadow-md transition duration-300">
+          <h3 class="text-lg font-bold">Patrimonio</h3>
+          <p class="mt-1 text-sm text-gray-500">Inventario digital con fotos, valoración y trazabilidad completa.</p>
+        </div>
+
+        <!-- Tarjeta: Seguridad -->
+        <div class="p-6 rounded-xl border border-gray-200 hover:border-verde-claro hover:shadow-md transition duration-300">
+          <h3 class="text-lg font-bold">Seguridad y Roles</h3>
+          <p class="mt-1 text-sm text-gray-500">Permisos por rol, control de acceso por módulo y por acción.</p>
+        </div>
+
+        <!-- Tarjeta: Documentos -->
+        <div class="p-6 rounded-xl border border-gray-200 hover:border-verde-claro hover:shadow-md transition duration-300">
+          <h3 class="text-lg font-bold">Gestión Documental</h3>
+          <p class="mt-1 text-sm text-gray-500">Repositorio con versionado, búsqueda y previsualización.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: ¿Para quién? -->
+  <section id="para-quien" class="py-16 px-4 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900">Adaptado a tu organización</h2>
+        <p class="mt-2 text-gray-500">Custodya se adapta a diferentes tipos de comunidades.</p>
+      </div>
+
+      <!-- Tres tarjetas de tipo de organización -->
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <!-- Hermandades -->
+        <div class="bg-white rounded-xl p-6 border border-gray-200">
+          <h3 class="text-xl font-bold">Hermandades</h3>
+          <p class="mt-2 text-sm text-gray-500">Gestión de hermanos, estaciones de penitencia, patrimonio cofrade y calendario de cultos.</p>
+          <ul class="mt-4 space-y-1 text-sm text-gray-600">
+            <li>- Nº de hermano y antigüedad</li>
+            <li>- Inventario de enseres y pasos</li>
+            <li>- Control de asistencia</li>
+          </ul>
+        </div>
+
+        <!-- Asociaciones -->
+        <div class="bg-white rounded-xl p-6 border border-gray-200">
+          <h3 class="text-xl font-bold">Asociaciones Vecinales</h3>
+          <p class="mt-2 text-sm text-gray-500">Comunicación con vecinos, asambleas, votaciones online y documentación legal.</p>
+          <ul class="mt-4 space-y-1 text-sm text-gray-600">
+            <li>- Censo de socios actualizado</li>
+            <li>- Convocatorias y asambleas</li>
+            <li>- Votaciones online</li>
+          </ul>
+        </div>
+
+        <!-- Grupos culturales -->
+        <div class="bg-white rounded-xl p-6 border border-gray-200">
+          <h3 class="text-xl font-bold">Grupos Culturales</h3>
+          <p class="mt-2 text-sm text-gray-500">Organización de eventos, gestión de socios y administración de espacios.</p>
+          <ul class="mt-4 space-y-1 text-sm text-gray-600">
+            <li>- Registro y renovación de socios</li>
+            <li>- Actividades y excursiones</li>
+            <li>- Certificados de socio</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de cifras -->
+  <section class="py-12 px-4 bg-verde-oscuro text-white">
+    <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <p class="text-3xl font-extrabold">500+</p>
+        <p class="text-sm text-green-200">Organizaciones</p>
+      </div>
+      <div>
+        <p class="text-3xl font-extrabold">50.000+</p>
+        <p class="text-sm text-green-200">Miembros gestionados</p>
+      </div>
+      <div>
+        <p class="text-3xl font-extrabold">99,9%</p>
+        <p class="text-sm text-green-200">Uptime</p>
+      </div>
+      <div>
+        <p class="text-3xl font-extrabold">24/7</p>
+        <p class="text-sm text-green-200">Soporte técnico</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de precios -->
+  <section id="precios" class="py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900">Precios sencillos</h2>
+        <p class="mt-2 text-gray-500">Empieza gratis. Sin permanencias ni sorpresas.</p>
+      </div>
+
+      <!-- Tres planes -->
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <!-- Plan Inicio -->
+        <div class="rounded-xl border border-gray-200 p-6 flex flex-col">
+          <h3 class="text-lg font-bold">Inicio</h3>
+          <p class="text-sm text-gray-500">Para organizaciones pequeñas</p>
+          <p class="mt-4 text-4xl font-extrabold">0€<span class="text-base font-normal text-gray-500">/mes</span></p>
+          <ul class="mt-6 space-y-2 text-sm text-gray-600 flex-1">
+            <li>- Hasta 50 miembros</li>
+            <li>- Gestión básica de cuotas</li>
+            <li>- Calendario de eventos</li>
+            <li>- Soporte por email</li>
+          </ul>
+          <a href="#contacto" class="mt-6 block text-center py-2 rounded-lg border-2 border-gray-200 font-semibold hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-verde-claro transition duration-200">
+            Empezar gratis
+          </a>
+        </div>
+
+        <!-- Plan Profesional (destacado) -->
+        <div class="rounded-xl border-2 border-verde bg-verde-suave p-6 flex flex-col relative">
+          <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-verde text-white text-xs font-bold px-3 py-1 rounded-full">
+            POPULAR
+          </span>
+          <h3 class="text-lg font-bold">Profesional</h3>
+          <p class="text-sm text-gray-500">Para organizaciones en crecimiento</p>
+          <p class="mt-4 text-4xl font-extrabold">29€<span class="text-base font-normal text-gray-500">/mes</span></p>
+          <ul class="mt-6 space-y-2 text-sm text-gray-600 flex-1">
+            <li>- Hasta 500 miembros</li>
+            <li>- Todos los módulos</li>
+            <li>- Pasarelas de pago</li>
+            <li>- Landing personalizable</li>
+            <li>- Soporte prioritario</li>
+          </ul>
+          <a href="#contacto" class="mt-6 block text-center py-2 rounded-lg bg-verde text-white font-semibold hover:bg-verde-oscuro focus:outline-none focus:ring-2 focus:ring-verde-claro transition duration-200">
+            Elegir Profesional
+          </a>
+        </div>
+
+        <!-- Plan Organización -->
+        <div class="rounded-xl border border-gray-200 p-6 flex flex-col">
+          <h3 class="text-lg font-bold">Organización</h3>
+          <p class="text-sm text-gray-500">Para grandes organizaciones</p>
+          <p class="mt-4 text-4xl font-extrabold">79€<span class="text-base font-normal text-gray-500">/mes</span></p>
+          <ul class="mt-6 space-y-2 text-sm text-gray-600 flex-1">
+            <li>- Miembros ilimitados</li>
+            <li>- API completa</li>
+            <li>- Backups y SLA</li>
+            <li>- Multi-organización</li>
+            <li>- Soporte 24/7</li>
+          </ul>
+          <a href="#contacto" class="mt-6 block text-center py-2 rounded-lg border-2 border-gray-200 font-semibold hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-verde-claro transition duration-200">
+            Contactar ventas
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de contacto -->
+  <section id="contacto" class="py-16 px-4 bg-verde-oscuro text-white">
+    <div class="max-w-lg mx-auto text-center">
+      <h2 class="text-3xl font-bold">¿Listo para empezar?</h2>
+      <p class="mt-2 text-green-200">Solicita tu demo gratuita y te contactamos en 24h.</p>
+
+      <!-- Formulario sencillo -->
+      <form id="formulario-contacto" class="mt-8 space-y-4 text-left">
+        <input type="text" placeholder="Nombre de tu organización" required
+          class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-green-200 focus:outline-none focus:ring-2 focus:ring-verde-claro transition duration-200" />
+        <input type="email" placeholder="Tu email" required
+          class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-green-200 focus:outline-none focus:ring-2 focus:ring-verde-claro transition duration-200" />
+        <select required class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-green-200 focus:outline-none focus:ring-2 focus:ring-verde-claro transition duration-200">
+          <option value="" class="text-gray-900">Tipo de organización</option>
+          <option value="hermandad" class="text-gray-900">Hermandad / Cofradía</option>
+          <option value="asociacion" class="text-gray-900">Asociación Vecinal</option>
+          <option value="cultural" class="text-gray-900">Grupo Cultural</option>
+          <option value="otro" class="text-gray-900">Otro</option>
+        </select>
+        <button type="submit" class="w-full py-3 rounded-lg bg-white text-verde-oscuro font-bold hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-verde-claro transition duration-200">
+          Solicitar demo gratuita
+        </button>
+      </form>
+      <p class="mt-4 text-xs text-green-200">Sin compromiso · Sin tarjeta de crédito</p>
+    </div>
+  </section>
+
+  <!-- Pie de página -->
+  <footer class="bg-gray-900 text-gray-400 py-10 px-4">
+    <div class="max-w-6xl mx-auto">
+
+      <!-- Links del footer en grid -->
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+
+        <!-- Marca -->
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <img src="./src/img/logo_grande.png" alt="Custodya" class="h-8 brightness-200" />
+            <span class="text-lg font-bold text-white">Custodya</span>
+          </div>
+          <p class="text-sm">Gestión integral para organizaciones comunitarias.</p>
+        </div>
+
+        <!-- Producto -->
+        <div>
+          <h4 class="text-white font-semibold mb-3">Producto</h4>
+          <ul class="space-y-1 text-sm">
+            <li><a href="#funcionalidades" class="hover:text-white">Funcionalidades</a></li>
+            <li><a href="#precios" class="hover:text-white">Precios</a></li>
+            <li><a href="#para-quien" class="hover:text-white">Casos de uso</a></li>
+          </ul>
+        </div>
+
+        <!-- Empresa -->
+        <div>
+          <h4 class="text-white font-semibold mb-3">Empresa</h4>
+          <ul class="space-y-1 text-sm">
+            <li><a href="#" class="hover:text-white">Sobre nosotros</a></li>
+            <li><a href="#" class="hover:text-white">Blog</a></li>
+            <li><a href="#contacto" class="hover:text-white">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div>
+          <h4 class="text-white font-semibold mb-3">Legal</h4>
+          <ul class="space-y-1 text-sm">
+            <li><a href="#" class="hover:text-white">Privacidad</a></li>
+            <li><a href="#" class="hover:text-white">Términos de uso</a></li>
+            <li><a href="#" class="hover:text-white">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="mt-8 pt-6 border-t border-gray-800 text-center text-sm">
+        <p>&copy; 2026 Custodya. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script principal -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
